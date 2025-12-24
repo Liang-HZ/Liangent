@@ -1,0 +1,10 @@
+openai
+fastapi
+uvicorn
+pydantic
+pydantic-settings
+sqlalchemy
+python-dotenv
+jinja2
+socksio
+requests

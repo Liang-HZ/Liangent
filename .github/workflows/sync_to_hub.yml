@@ -1,0 +1,20 @@
+name: Sync to Hugging Face hub
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  sync-to-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
+      - name: Push to hub
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        # 注意下面这行的变化：master:main
+        # 意思就是：Source(master) -> Destination(main)
+        run: git push https://oauth:$HF_TOKEN@huggingface.co/spaces/agentic2025/liangent master:main

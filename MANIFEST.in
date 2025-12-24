@@ -1,0 +1,5 @@
+include liangent/env_template
+include liangent/agents_md_template
+recursive-include liangent/prompts *.j2
+include README.md
+include LICENSE

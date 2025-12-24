@@ -1,0 +1,28 @@
+# Liangent Configuration Template
+# Rename this file to .env and fill in the values
+
+# Database Connection String
+# For SQLite: sqlite:///./liangent.db
+# For PostgreSQL: postgresql://user:password@localhost/dbname
+DATABASE_URL=sqlite:///./liangent.db
+
+# OpenAI Compatible API Settings
+# Required
+OPENAI_API_KEY=sk-placeholder
+# Optional (Defaults to https://api.openai.com/v1)
+OPENAI_BASE_URL=https://api.openai.com/v1
+# Model Name
+MODEL_NAME=gpt-3.5-turbo
+# Alias if needed
+OPENAI_MODEL_NAME=
+
+# Security & Limits
+MAX_STEPS=20
+# Tool Usage Policy
+MIN_TOOL_USE=1
+MAX_TOOL_USE=15
+DEBUG=False
+
+# Function Calling
+# Set to True if your model supports native function calling (e.g., GPT-4, Claude 3)
+SUPPORTS_FUNCTION_CALLING=False
